@@ -1,0 +1,8 @@
+source 'ssh://gerrit.zhenguanyu.com:29418/ios-specs'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+
+target 'Homework1' do
+pod 'Masonry', '~> 1.1.0'
+end
