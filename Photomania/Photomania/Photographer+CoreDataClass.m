@@ -1,15 +1,14 @@
 //
-//  ViewController.h
+//  Photographer+CoreDataClass.m
 //  Photomania
 //
 //  Created by 谷琪 on 2020/4/9.
 //  Copyright © 2020 谷琪. All rights reserved.
 //
+//
 
-#import <UIKit/UIKit.h>
+#import "Photographer+CoreDataClass.h"
 
-@interface ViewController : UIViewController
-
+@implementation Photographer
 
 @end
-
