@@ -63,8 +63,6 @@
 		C0791ED62436D66B006934EA = {
 			isa = PBXGroup;
 			children = (
-				C0308D5C243B442800FB7839 /* PlayingCardGameViewController.h */,
-				C0308D5D243B442800FB7839 /* PlayingCardGameViewController.m */,
 				C0791F0B2436F879006934EA /* Model */,
 				C0791EE12436D66B006934EA /* Matchisma */,
 				C0791EE02436D66B006934EA /* Products */,
@@ -82,6 +80,8 @@
 		C0791EE12436D66B006934EA /* Matchisma */ = {
 			isa = PBXGroup;
 			children = (
+				C0308D5C243B442800FB7839 /* PlayingCardGameViewController.h */,
+				C0308D5D243B442800FB7839 /* PlayingCardGameViewController.m */,
 				C0791EE22436D66B006934EA /* AppDelegate.h */,
 				C0791EE32436D66B006934EA /* AppDelegate.m */,
 				C0791EE52436D66B006934EA /* SceneDelegate.h */,
