@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  PhotomaniaAppDelegate.h
 //  Photomania
 //
 //  Created by 谷琪 on 2020/4/9.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface PhotomaniaAppDelegate : UIResponder <UIApplicationDelegate>
 
 
 @end
