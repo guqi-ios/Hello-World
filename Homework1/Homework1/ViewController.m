@@ -9,24 +9,50 @@
 #import "ViewController.h"
 #import "Masonry.h"
 
-static const CGFloat HEIGHT = 100;
-static const CGFloat WIDTH = 100;
-
 @interface ViewController ()
-@property(nonatomic) NSInteger number;
-@property(strong, nonatomic) UILabel *label;
-@property(strong, nonatomic) UIButton *button;
-@property(strong, nonatomic) UIView *containerView;
+@property (nonatomic) NSInteger number;
+@property (strong, nonatomic) UILabel *label;
+@property (strong, nonatomic) UIButton *button;
+@property (strong, nonatomic) UIView *containerView;
 @end
 
 @implementation ViewController
 
+- (UILabel *)label
+{
+    if (!_label) {
+        _label = [[UILabel alloc] init];
+        _label.text = @"0";
+        _label.backgroundColor = [UIColor redColor];
+    }
+    return _label;
+}
+
+- (UIButton *)button
+{
+    if (!_button) {
+        _button = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_button setTitle:@"+1" forState:UIControlStateNormal];
+        _button.backgroundColor = [UIColor purpleColor];
+        [_button addTarget:self action:@selector(buttonTouched) forControlEvents:UIControlEventTouchDown];
+    
+    }
+    return _button;
+}
+
+- (UIView *)containerView
+{
+    if (!_containerView) {
+        _containerView = [[UIView alloc] init];
+        _containerView.backgroundColor = [UIColor greenColor];
+    }
+    return _containerView;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initContainerView];
-    [self initViews];
+    [self setupUserInterface];
 }
 
 
@@ -40,51 +66,26 @@ static const CGFloat WIDTH = 100;
 
 #pragma mark - Private methods
 
-- (void)initContainerView
+- (void)setupUserInterface
 {
-    _containerView = [[UIView alloc] init];
-    _containerView.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:self.containerView];
+    [self.containerView addSubview:self.label];
+    [self.containerView addSubview:self.button];
     
-    [self.view addSubview:_containerView];
-
-    [_containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@(HEIGHT));
-        make.width.equalTo(@(WIDTH));
-        make.center.equalTo(self.view);
+    [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(@0);
     }];
-}
-
-- (void)initViews
-{
-    // _label
-    
-    _label = [[UILabel alloc] init];
-    _label.text = @"0";
-    _label.backgroundColor = [UIColor redColor];
-    [_containerView addSubview:_label];
-    
-    [_label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@(HEIGHT/2));
-        make.centerX.equalTo(_label.superview.mas_centerX);
-        make.top.equalTo(_label.superview.mas_top);
+    [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(@0);
+        make.left.and.top.greaterThanOrEqualTo(@0);
+        make.right.lessThanOrEqualTo(@0);
     }];
-    
-    // _button
-    
-    _button = [[UIButton alloc] init];
-    [_button setTitle:@"+1" forState:UIControlStateNormal];
-    _button.backgroundColor = [UIColor purpleColor];
-    [_button addTarget:self action:@selector(buttonTouched) forControlEvents:UIControlEventTouchDown];
-    [_containerView addSubview:_button];
-    
-    [_button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@(HEIGHT/2));
-        make.centerX.equalTo(_button.superview.mas_centerX);
-        make.right.equalTo(_button.superview.mas_right);
-        make.left.equalTo(_button.superview.mas_left);
-        make.bottom.equalTo(_button.superview.mas_bottom);
+    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.label.mas_bottom).with.offset(10);
+        make.centerX.equalTo(@0);
+        make.left.greaterThanOrEqualTo(@0);
+        make.right.and.bottom.lessThanOrEqualTo(@0);
     }];
-    
 }
 
 @end
