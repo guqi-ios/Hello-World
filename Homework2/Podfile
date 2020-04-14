@@ -1,0 +1,11 @@
+source 'ssh://gerrit.zhenguanyu.com:29418/ios-specs'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+
+target 'Homework2' do
+pod 'Masonry', '~> 1.1.0'
+pod 'YTKNetwork', '~> 2.1.4'
+pod 'Mantle', '~> 2.1.1'
+pod 'SDWebImage', '~> 5.7.1'
+end
