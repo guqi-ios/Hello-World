@@ -25,6 +25,14 @@
 {
     [super viewDidLoad];
     [self.tableView registerClass:TableViewCell.class forCellReuseIdentifier:CellIdentifier];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.tintColor = [UIColor blackColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(fetchMicroblogs)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    
     [self fetchMicroblogs];
 }
 
@@ -36,8 +44,7 @@
     [api start];
 }
 
-- (void)requestFinished:(YTKBaseRequest *)request
-{
+- (void)requestFinished:(YTKBaseRequest *)request {
     dispatch_queue_t fetchQ = dispatch_queue_create("microblog", NULL);
     dispatch_async(fetchQ, ^{
         NSData *JSONData = request.responseData;
@@ -71,8 +78,7 @@
 
 static NSString *CellIdentifier = @"Cell";
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     if (!cell) {
         cell = [[TableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
