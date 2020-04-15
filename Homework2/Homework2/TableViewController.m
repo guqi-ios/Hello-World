@@ -28,6 +28,7 @@ static NSString *CellIdentifier = @"Cell";
     [self.tableView addSubview:self.refreshControl];
     
     [self fetchMicroblogs];
+//    [self fakeFetchMicroblogs];
 }
 
 #pragma mark - Private Method
@@ -60,6 +61,18 @@ static NSString *CellIdentifier = @"Cell";
     NSLog(@"failed");
 }
 
+- (void)fakeFetchMicroblogs
+{
+    [self.refreshControl beginRefreshing];
+    NSArray *JSONArray = @[
+        @{@"created_at" : @"Fri Dec 31 13:34:19 +0800 2010", @"text" : @"text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1", @"user" : @{@"name" : @"name1",@"profile_image_url" : @"https://tvax2.sinaimg.cn/crop.0.0.512.512.50/656de1aely8gds0ji7q1pj20e80e8t8o.jpg?KID=imgbed,tva&Expires=1586764714&ssig=svPW6gvGdA"}},
+        @{@"created_at" : @"Fri Dec 31 13:34:19 +0800 2010", @"text" : @"text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2text2", @"user" : @{@"name" : @"name2",@"profile_image_url" : @"https://tvax2.sinaimg.cn/crop.0.0.512.512.50/7f8eae87ly8gaehbgzz0yj20e80e83z4.jpg?KID=imgbed,tva&Expires=1586764714&ssig=yH9u1TABfA"}}
+    ];
+    NSArray *microblogs = [MTLJSONAdapter modelsOfClass:Microblog.class fromJSONArray:JSONArray error:NULL];
+    self.microblogs = microblogs;
+    [self.refreshControl endRefreshing];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -81,7 +94,6 @@ static NSString *CellIdentifier = @"Cell";
     cell.userNameLabel.text = microblog.user.name;
     cell.createdAtLabel.text = [microblog.createdAt description];
     cell.microblogTextLabel.text = microblog.microblogText;
-//    cell.userProfileImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:microblog.user.proflieImageURL]];
     [cell.userProfileImageView sd_setImageWithURL:microblog.user.proflieImageURL];
     
     return cell;
