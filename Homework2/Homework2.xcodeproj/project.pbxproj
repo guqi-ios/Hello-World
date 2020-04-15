@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0EA7BAE661D6044162D56433 /* libPods-Homework2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4FE6AE522B10F6345C940E /* libPods-Homework2.a */; };
-		C00E1377244403630034500F /* GetMicroblogsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C00E1376244403630034500F /* GetMicroblogsAPI.m */; };
+		C00E1377244403630034500F /* MBFGetMicroblogsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C00E1376244403630034500F /* MBFGetMicroblogsAPI.m */; };
 		C00E137B244414F70034500F /* Microblog.m in Sources */ = {isa = PBXBuildFile; fileRef = C00E137A244414F70034500F /* Microblog.m */; };
 		C00E137E244416310034500F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C00E137D244416310034500F /* User.m */; };
 		C00E1384244460810034500F /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C00E1383244460810034500F /* TableViewCell.m */; };
@@ -23,8 +23,8 @@
 		5D78967E27786CC8AD9D32AB /* Pods-Homework2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homework2.release.xcconfig"; path = "Target Support Files/Pods-Homework2/Pods-Homework2.release.xcconfig"; sourceTree = "<group>"; };
 		6A4FE6AE522B10F6345C940E /* libPods-Homework2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Homework2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00E1374244402380034500F /* MicroblogAPIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MicroblogAPIKey.h; sourceTree = "<group>"; };
-		C00E1375244403630034500F /* GetMicroblogsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetMicroblogsAPI.h; sourceTree = "<group>"; };
-		C00E1376244403630034500F /* GetMicroblogsAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetMicroblogsAPI.m; sourceTree = "<group>"; };
+		C00E1375244403630034500F /* MBFGetMicroblogsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBFGetMicroblogsAPI.h; sourceTree = "<group>"; };
+		C00E1376244403630034500F /* MBFGetMicroblogsAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBFGetMicroblogsAPI.m; sourceTree = "<group>"; };
 		C00E1379244414F70034500F /* Microblog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Microblog.h; sourceTree = "<group>"; };
 		C00E137A244414F70034500F /* Microblog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Microblog.m; sourceTree = "<group>"; };
 		C00E137C244416310034500F /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -74,8 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				C00E1374244402380034500F /* MicroblogAPIKey.h */,
-				C00E1375244403630034500F /* GetMicroblogsAPI.h */,
-				C00E1376244403630034500F /* GetMicroblogsAPI.m */,
+				C00E1375244403630034500F /* MBFGetMicroblogsAPI.h */,
+				C00E1376244403630034500F /* MBFGetMicroblogsAPI.m */,
 			);
 			path = "Microblog Fetcher";
 			sourceTree = "<group>";
@@ -223,7 +223,7 @@
 			files = (
 				C00E1384244460810034500F /* TableViewCell.m in Sources */,
 				C00E137E244416310034500F /* User.m in Sources */,
-				C00E1377244403630034500F /* GetMicroblogsAPI.m in Sources */,
+				C00E1377244403630034500F /* MBFGetMicroblogsAPI.m in Sources */,
 				C060143924407BDC00B04F36 /* TableViewController.m in Sources */,
 				C0D965032440297800935DA3 /* AppDelegate.m in Sources */,
 				C0D965142440297900935DA3 /* main.m in Sources */,

@@ -1,17 +1,18 @@
 //
-//  GetMicroblogsAPI.m
+//  MBFGetMicroblogsAPI.m
 //  Homework2
 //
 //  Created by 谷琪 on 2020/4/13.
 //  Copyright © 2020 谷琪. All rights reserved.
 //
 
-#import "GetMicroblogsAPI.h"
+#import "MBFGetMicroblogsAPI.h"
 #import "MicroblogAPIKey.h"
 
-@implementation GetMicroblogsAPI
+@implementation MBFGetMicroblogsAPI
 
-- (YTKRequestMethod)requestMethod {
+- (YTKRequestMethod)requestMethod
+{
     return YTKRequestMethodGET;
 }
 

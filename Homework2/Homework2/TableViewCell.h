@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TableViewCell : UITableViewCell
-@property (strong, nonatomic) UILabel *userNameLabel;
-@property (strong, nonatomic) UILabel *createdAtLabel;
-@property (strong, nonatomic) UILabel *microblogTextLabel;
-@property (strong, nonatomic) UIImageView *userProfileImageView;
+@property (nonatomic, strong) UILabel *userNameLabel;
+@property (nonatomic, strong) UILabel *createdAtLabel;
+@property (nonatomic, strong) UILabel *microblogTextLabel;
+@property (nonatomic, strong) UIImageView *userProfileImageView;
 @end
 
 NS_ASSUME_NONNULL_END

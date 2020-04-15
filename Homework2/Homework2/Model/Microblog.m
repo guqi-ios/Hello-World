@@ -9,6 +9,12 @@
 #import "Microblog.h"
 #import "MTLValueTransformer.h"
 
+@interface Microblog()
+
+@property (nonatomic, strong, readonly) NSDateFormatter *dateFormatter;
+
+@end
+
 @implementation Microblog
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey
@@ -20,13 +26,6 @@
     };
 }
 
-+ (NSDateFormatter *)dateFormatter
-{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"EEE MM dd HH:mm:ss ZZZ yyyy";
-    return dateFormatter;
-}
-
 + (NSValueTransformer *)createdAtJSONTransformer
 {
     return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *dateString, BOOL *success, NSError *__autoreleasing *error) {
@@ -34,6 +33,13 @@
     } reverseBlock:^id(NSDate *date, BOOL *success, NSError *__autoreleasing *error) {
         return [self.dateFormatter stringFromDate:date];
     }];
+}
+
++ (NSDateFormatter *)dateFormatter
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"EEE MM dd HH:mm:ss ZZZ yyyy";
+    return dateFormatter;
 }
 
 @end

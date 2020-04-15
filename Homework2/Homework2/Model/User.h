@@ -12,9 +12,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface User : MTLModel<MTLJSONSerializing>
+@interface User : MTLModel <MTLJSONSerializing>
 @property (nonatomic, copy, readonly) NSString *name;
-@property (nonatomic, copy, readonly) NSURL *proflieImageURL;
+@property (nonatomic, readonly) NSURL *proflieImageURL;
 @end
 
 NS_ASSUME_NONNULL_END

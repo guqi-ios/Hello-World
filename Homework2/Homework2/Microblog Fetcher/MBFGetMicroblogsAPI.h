@@ -1,5 +1,5 @@
 //
-//  GetMicroblogsAPI.h
+//  MBFGetMicroblogsAPI.h
 //  Homework2
 //
 //  Created by 谷琪 on 2020/4/13.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GetMicroblogsAPI : YTKRequest
+@interface MBFGetMicroblogsAPI : YTKRequest
 @end
 
 NS_ASSUME_NONNULL_END

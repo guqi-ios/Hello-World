@@ -9,6 +9,8 @@
 #import "TableViewCell.h"
 #import "Masonry.h"
 
+static const int OFFSET = 10;
+
 @implementation TableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -20,7 +22,7 @@
     return self;
 }
 
-static const int OFFSET = 10;
+#pragma mark - Private Method
 
 - (void)initView
 {
@@ -30,16 +32,14 @@ static const int OFFSET = 10;
     [self.contentView addSubview:self.microblogTextLabel];
     self.contentView.backgroundColor = [UIColor systemPinkColor];
     
-    self.microblogTextLabel.numberOfLines = 0;
-    
     [self.userProfileImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.and.top.equalTo(@0).with.offset(OFFSET);
+        make.left.and.top.equalTo(@(OFFSET));
         make.left.greaterThanOrEqualTo(@0);
         make.right.and.bottom.lessThanOrEqualTo(@0);
     }];
     [self.userNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.userProfileImageView.mas_right).with.offset(OFFSET);
-        make.top.equalTo(@0).with.offset(OFFSET);
+        make.top.equalTo(@(OFFSET));
         make.left.greaterThanOrEqualTo(@0);
         make.right.and.bottom.lessThanOrEqualTo(@0);
     }];
@@ -50,13 +50,15 @@ static const int OFFSET = 10;
         make.right.and.bottom.lessThanOrEqualTo(@0);
     }];
     [self.microblogTextLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@0).with.offset(OFFSET);
+        make.left.equalTo(@(OFFSET));
         make.top.equalTo(self.createdAtLabel.mas_bottom).with.offset(OFFSET);
-        make.right.equalTo(@0).with.offset(-OFFSET);
+        make.right.equalTo(@(-OFFSET));
         make.left.greaterThanOrEqualTo(@0);
         make.right.and.bottom.lessThanOrEqualTo(@0);
     }];
 }
+
+#pragma mark - Getter & Setter
 
 - (UIImageView *)userProfileImageView
 {
@@ -89,6 +91,7 @@ static const int OFFSET = 10;
     if (!_microblogTextLabel){
         _microblogTextLabel = [[UILabel alloc] init];
         _microblogTextLabel.backgroundColor = [UIColor purpleColor];
+        _microblogTextLabel.numberOfLines = 0;
     }
     return _microblogTextLabel;
 }

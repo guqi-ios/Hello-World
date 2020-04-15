@@ -14,8 +14,9 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
-    return @{@"name" : @"name",
-             @"proflieImageURL" : @"profile_image_url"
+    return @{
+        @"name" : @"name",
+        @"proflieImageURL" : @"profile_image_url"
     };
 }
 
@@ -23,6 +24,5 @@
 {
     return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
-
 
 @end

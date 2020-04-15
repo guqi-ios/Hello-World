@@ -7,19 +7,13 @@
 //
 
 #import "TableViewController.h"
-#import "GetMicroblogsAPI.h"
-#import "Microblog.h"
+#import "MBFGetMicroblogsAPI.h"
 #import "TableViewCell.h"
 #import "SDWebImage.h"
 
+static NSString *CellIdentifier = @"Cell";
 
 @implementation TableViewController
-
-- (void)setMicroblogs:(NSArray *)microblogs
-{
-    _microblogs = microblogs;
-    [self.tableView reloadData];
-}
 
 - (void)viewDidLoad
 {
@@ -36,10 +30,12 @@
     [self fetchMicroblogs];
 }
 
+#pragma mark - Private Method
+
 - (void)fetchMicroblogs
 {
     [self.refreshControl beginRefreshing];
-    GetMicroblogsAPI *api = [[GetMicroblogsAPI alloc] init];
+    MBFGetMicroblogsAPI *api = [[MBFGetMicroblogsAPI alloc] init];
     api.delegate = self;
     [api start];
 }
@@ -66,25 +62,22 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.microblogs count];
 }
 
-static NSString *CellIdentifier = @"Cell";
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     if (!cell) {
-        cell = [[TableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    if (indexPath.row >= self.microblogs.count) {
+       return cell;
+    }
     Microblog *microblog = self.microblogs[indexPath.row];
+    
     cell.userNameLabel.text = microblog.user.name;
     cell.createdAtLabel.text = [microblog.createdAt description];
     cell.microblogTextLabel.text = microblog.microblogText;
@@ -92,6 +85,14 @@ static NSString *CellIdentifier = @"Cell";
     [cell.userProfileImageView sd_setImageWithURL:microblog.user.proflieImageURL];
     
     return cell;
+}
+
+#pragma mark - Getter & Setter
+
+- (void)setMicroblogs:(NSArray *)microblogs
+{
+    _microblogs = microblogs;
+    [self.tableView reloadData];
 }
 
 @end

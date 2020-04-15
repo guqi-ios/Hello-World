@@ -12,10 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Microblog : MTLModel<MTLJSONSerializing>
-@property (nonatomic, strong ,readonly) User *user;
-@property (nonatomic, copy ,readonly) NSString *microblogText;
-@property (nonatomic, copy ,readonly) NSDate *createdAt;
+@interface Microblog : MTLModel <MTLJSONSerializing>
+@property (nonatomic, strong, readonly) User *user;
+@property (nonatomic, copy, readonly) NSString *microblogText;
+@property (nonatomic, readonly) NSDate *createdAt;
 @end
 
 NS_ASSUME_NONNULL_END
