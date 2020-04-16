@@ -1,8 +1,8 @@
 //
-//  Case3ViewController.h
+//  Case2TableViewController.h
 //  ExerciseDemo
 //
-//  Created by 谷琪 on 2020/4/15.
+//  Created by 谷琪 on 2020/4/16.
 //  Copyright © 2020 谷琪. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Case3ViewController : UIViewController
+@interface Case2TableViewController : UITableViewController
 
 @end
 

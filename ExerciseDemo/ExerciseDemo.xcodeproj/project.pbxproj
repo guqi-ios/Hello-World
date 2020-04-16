@@ -11,10 +11,16 @@
 		C01DE2B72445CE5700BD89C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C01DE2B62445CE5700BD89C0 /* AppDelegate.m */; };
 		C01DE2C22445CE5800BD89C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01DE2C12445CE5800BD89C0 /* Assets.xcassets */; };
 		C01DE2C82445CE5800BD89C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C01DE2C72445CE5800BD89C0 /* main.m */; };
+		C03004262448154200314194 /* Case3CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C03004252448154200314194 /* Case3CollectionViewController.m */; };
+		C03004292448300F00314194 /* Case3CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C03004282448300E00314194 /* Case3CollectionModel.m */; };
+		C030042F2448334600314194 /* Case3CollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C030042E2448334600314194 /* Case3CollectionHeaderView.m */; };
+		C0300432244833A400314194 /* Case3CollectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0300431244833A400314194 /* Case3CollectionFooterView.m */; };
+		C0300435244833E300314194 /* Case3CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0300434244833E300314194 /* Case3CollectionViewCell.m */; };
+		C030043824485F2B00314194 /* Case2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C030043724485F2B00314194 /* Case2TableViewController.m */; };
+		C030043B24485F9000314194 /* Case2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C030043A24485F9000314194 /* Case2TableViewCell.m */; };
+		C030043E24485FC400314194 /* Case2Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C030043D24485FC400314194 /* Case2Model.m */; };
 		C0AD042F2446FF1C000DC425 /* Case1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD042E2446FF1C000DC425 /* Case1ViewController.m */; };
 		C0AD043224470609000DC425 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD043124470609000DC425 /* MainViewController.m */; };
-		C0AD043524470911000DC425 /* Case2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD043424470911000DC425 /* Case2ViewController.m */; };
-		C0AD043824470920000DC425 /* Case3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD043724470920000DC425 /* Case3ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,14 +33,26 @@
 		C01DE2C12445CE5800BD89C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01DE2C62445CE5800BD89C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C01DE2C72445CE5800BD89C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C03004242448154200314194 /* Case3CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3CollectionViewController.h; sourceTree = "<group>"; };
+		C03004252448154200314194 /* Case3CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3CollectionViewController.m; sourceTree = "<group>"; };
+		C03004272448300E00314194 /* Case3CollectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3CollectionModel.h; sourceTree = "<group>"; };
+		C03004282448300E00314194 /* Case3CollectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3CollectionModel.m; sourceTree = "<group>"; };
+		C030042D2448334600314194 /* Case3CollectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3CollectionHeaderView.h; sourceTree = "<group>"; };
+		C030042E2448334600314194 /* Case3CollectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3CollectionHeaderView.m; sourceTree = "<group>"; };
+		C0300430244833A400314194 /* Case3CollectionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3CollectionFooterView.h; sourceTree = "<group>"; };
+		C0300431244833A400314194 /* Case3CollectionFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3CollectionFooterView.m; sourceTree = "<group>"; };
+		C0300433244833E300314194 /* Case3CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3CollectionViewCell.h; sourceTree = "<group>"; };
+		C0300434244833E300314194 /* Case3CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3CollectionViewCell.m; sourceTree = "<group>"; };
+		C030043624485F2B00314194 /* Case2TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case2TableViewController.h; sourceTree = "<group>"; };
+		C030043724485F2B00314194 /* Case2TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case2TableViewController.m; sourceTree = "<group>"; };
+		C030043924485F9000314194 /* Case2TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case2TableViewCell.h; sourceTree = "<group>"; };
+		C030043A24485F9000314194 /* Case2TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case2TableViewCell.m; sourceTree = "<group>"; };
+		C030043C24485FC400314194 /* Case2Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case2Model.h; sourceTree = "<group>"; };
+		C030043D24485FC400314194 /* Case2Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case2Model.m; sourceTree = "<group>"; };
 		C0AD042D2446FF1C000DC425 /* Case1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case1ViewController.h; sourceTree = "<group>"; };
 		C0AD042E2446FF1C000DC425 /* Case1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case1ViewController.m; sourceTree = "<group>"; };
 		C0AD043024470609000DC425 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C0AD043124470609000DC425 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		C0AD043324470911000DC425 /* Case2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case2ViewController.h; sourceTree = "<group>"; };
-		C0AD043424470911000DC425 /* Case2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case2ViewController.m; sourceTree = "<group>"; };
-		C0AD043624470920000DC425 /* Case3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3ViewController.h; sourceTree = "<group>"; };
-		C0AD043724470920000DC425 /* Case3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +105,8 @@
 		C01DE2B42445CE5700BD89C0 /* ExerciseDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C0AD043924470963000DC425 /* Sub View Controllers */,
+				C030042C2448312300314194 /* Case */,
+				C030042B2448304C00314194 /* Model */,
 				C0AD043024470609000DC425 /* MainViewController.h */,
 				C0AD043124470609000DC425 /* MainViewController.m */,
 				C01DE2B52445CE5700BD89C0 /* AppDelegate.h */,
@@ -99,17 +118,36 @@
 			path = ExerciseDemo;
 			sourceTree = "<group>";
 		};
-		C0AD043924470963000DC425 /* Sub View Controllers */ = {
+		C030042B2448304C00314194 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C030043C24485FC400314194 /* Case2Model.h */,
+				C030043D24485FC400314194 /* Case2Model.m */,
+				C03004272448300E00314194 /* Case3CollectionModel.h */,
+				C03004282448300E00314194 /* Case3CollectionModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C030042C2448312300314194 /* Case */ = {
 			isa = PBXGroup;
 			children = (
 				C0AD042D2446FF1C000DC425 /* Case1ViewController.h */,
 				C0AD042E2446FF1C000DC425 /* Case1ViewController.m */,
-				C0AD043324470911000DC425 /* Case2ViewController.h */,
-				C0AD043424470911000DC425 /* Case2ViewController.m */,
-				C0AD043624470920000DC425 /* Case3ViewController.h */,
-				C0AD043724470920000DC425 /* Case3ViewController.m */,
+				C030043624485F2B00314194 /* Case2TableViewController.h */,
+				C030043724485F2B00314194 /* Case2TableViewController.m */,
+				C030043924485F9000314194 /* Case2TableViewCell.h */,
+				C030043A24485F9000314194 /* Case2TableViewCell.m */,
+				C03004242448154200314194 /* Case3CollectionViewController.h */,
+				C03004252448154200314194 /* Case3CollectionViewController.m */,
+				C0300433244833E300314194 /* Case3CollectionViewCell.h */,
+				C0300434244833E300314194 /* Case3CollectionViewCell.m */,
+				C030042D2448334600314194 /* Case3CollectionHeaderView.h */,
+				C030042E2448334600314194 /* Case3CollectionHeaderView.m */,
+				C0300430244833A400314194 /* Case3CollectionFooterView.h */,
+				C0300431244833A400314194 /* Case3CollectionFooterView.m */,
 			);
-			path = "Sub View Controllers";
+			path = Case;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,11 +245,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AD042F2446FF1C000DC425 /* Case1ViewController.m in Sources */,
+				C030042F2448334600314194 /* Case3CollectionHeaderView.m in Sources */,
+				C030043E24485FC400314194 /* Case2Model.m in Sources */,
+				C0300435244833E300314194 /* Case3CollectionViewCell.m in Sources */,
 				C01DE2B72445CE5700BD89C0 /* AppDelegate.m in Sources */,
-				C0AD043824470920000DC425 /* Case3ViewController.m in Sources */,
-				C0AD043524470911000DC425 /* Case2ViewController.m in Sources */,
+				C03004262448154200314194 /* Case3CollectionViewController.m in Sources */,
+				C0300432244833A400314194 /* Case3CollectionFooterView.m in Sources */,
+				C030043B24485F9000314194 /* Case2TableViewCell.m in Sources */,
+				C030043824485F2B00314194 /* Case2TableViewController.m in Sources */,
 				C0AD043224470609000DC425 /* MainViewController.m in Sources */,
 				C01DE2C82445CE5800BD89C0 /* main.m in Sources */,
+				C03004292448300F00314194 /* Case3CollectionModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

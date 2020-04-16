@@ -21,12 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initSubviews];
+    self.title = @"Case 1: UIScrollView";
+    [self setupUserInterface];
 }
 
 #pragma mark - Private Methods
 
-- (void) initSubviews
+- (void) setupUserInterface
 {
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.imageView];

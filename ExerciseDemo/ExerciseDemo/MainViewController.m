@@ -9,8 +9,8 @@
 #import "MainViewController.h"
 #import "Masonry.h"
 #import "Case1ViewController.h"
-#import "Case2ViewController.h"
-#import "Case3ViewController.h"
+#import "Case2TableViewController.h"
+#import "Case3CollectionViewController.h"
 
 @interface MainViewController ()
 
@@ -28,12 +28,12 @@ static const int OFFSET = 5;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initSubviews];
+    [self setupUserInterface];
     
 }
 #pragma mark - Private methods
 
-- (void) initSubviews
+- (void)setupUserInterface
 {
     [self.view addSubview:self.containerView];
     [self.containerView addSubview:self.case1Button];
@@ -68,19 +68,20 @@ static const int OFFSET = 5;
 {
     Case1ViewController *cvc = [[Case1ViewController alloc] init];
     [self.navigationController pushViewController:cvc animated:true];
-    
 }
 
 - (void)caseOfUITableViewButtonTouched
 {
-    Case2ViewController *cvc = [[Case2ViewController alloc] init];
-    [self.navigationController pushViewController:cvc animated:true];
+    Case2TableViewController *ctvc = [[Case2TableViewController alloc] init];
+    [self.navigationController pushViewController:ctvc animated:true];
 }
 
 - (void)caseOfUICollectionViewButtonTouched
 {
-    Case3ViewController *cvc = [[Case3ViewController alloc] init];
-    [self.navigationController pushViewController:cvc animated:true];
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    Case3CollectionViewController *ccvc = [[Case3CollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+    [self.navigationController pushViewController:ccvc animated:true];
 }
 
 #pragma mark - Getters & Setters
