@@ -35,8 +35,8 @@
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(@0);
     }];
-    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-    }];
+//    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {}];
+    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
