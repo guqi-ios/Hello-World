@@ -1,5 +1,5 @@
 //
-//  Case3CollectionModel.h
+//  Case3Model.h
 //  ExerciseDemo
 //
 //  Created by 谷琪 on 2020/4/16.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Case3CollectionModel : NSObject
+@interface Case3Model : NSObject
  
 @property (nonatomic, strong) NSString *imageName;
 @property (nonatomic, strong) NSString *title;

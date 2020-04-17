@@ -7,7 +7,7 @@
 //
 
 #import "Case3CollectionViewController.h"
-#import "Case3CollectionModel.h"
+#import "Case3Model.h"
 #import "Case3CollectionHeaderView.h"
 #import "Case3CollectionViewCell.h"
 #import "Case3CollectionFooterView.h"
@@ -15,7 +15,7 @@
 
 @interface Case3CollectionViewController () <UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic, strong) NSArray<Case3CollectionModel *> *models;
+@property (nonatomic, strong) NSArray<Case3Model *> *models;
 
 @end
 
@@ -32,13 +32,8 @@
 - (void)setupUserInterface
 {
     self.collectionView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:self.collectionView];
-    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(@0);
-    }];
-    
     [self.collectionView registerClass:[Case3CollectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:Case3CollectionHeaderID];
-    [self.collectionView registerClass:[Case3CollectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:Case3CollectionFooterID];
+    [self.collectionView registerClass:[Case3CollectionFooterView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:Case3CollectionFooterID];
     [self.collectionView registerClass:[Case3CollectionViewCell class] forCellWithReuseIdentifier:Case3CollectionCellID];
 }
 
@@ -74,45 +69,37 @@
         Case3CollectionFooterView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:Case3CollectionFooterID forIndexPath:indexPath];
         footerView.label.text = @"Footer";
         return footerView;
+    } else {
+        return nil;
     }
-    return nil;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(widthCollectionCell, heightCollectionCell);
+    return CGSizeMake(WIDTH_CELL, HEIGHT_CELL);
 }
 
-// 定义每个UICollectionViewCell的margin
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0);
-}
-
-// 设定页眉的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    return CGSizeMake(100, 10);
+    return CGSizeMake(0, HEIGHT_HEADER);
 }
  
-// 设定页脚的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 {
-    return CGSizeMake(100, 10);
+    return CGSizeMake(0, HEIGHT_FOOTER);
 }
 
 #pragma mark - Getters & Setters
 
-- (NSArray<Case3CollectionModel *> *)models
+- (NSArray<Case3Model *> *)models
 {
     if (!_models) {
-//        NSInteger count = arc4random() % 20 + 1;
-        NSInteger count = 3;
+        NSInteger count = 15;
         NSMutableArray *tmpModels = [[NSMutableArray alloc] initWithCapacity:count];
         for (int i = 0; i < count; i++) {
-            Case3CollectionModel *model = [[Case3CollectionModel alloc] init];
+            Case3Model *model = [[Case3Model alloc] init];
             model.imageName = @"cardback";
             model.title = @"cardback";
             [tmpModels addObject:model];

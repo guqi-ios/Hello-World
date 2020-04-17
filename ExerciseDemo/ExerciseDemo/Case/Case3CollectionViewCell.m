@@ -9,11 +9,18 @@
 #import "Case3CollectionViewCell.h"
 #import "Masonry.h"
 
+@interface Case3CollectionViewCell()
+
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@end
+
 @implementation Case3CollectionViewCell
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
         [self initSubviews];
     }
@@ -28,18 +35,21 @@
     [self.contentView addSubview:self.titleLabel];
     self.contentView.backgroundColor = [UIColor grayColor];
     
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(@0);
+    }];
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentView.mas_top);
-        make.centerX.equalTo(self.contentView.mas_centerX);
+        make.top.equalTo(@0);
+        make.centerX.equalTo(@0);
         make.left.and.top.greaterThanOrEqualTo(@0);
         make.right.lessThanOrEqualTo(@0);
     }];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.imageView.mas_bottom);
-        make.bottom.equalTo(self.contentView.mas_bottom);
-        make.centerX.equalTo(self.contentView.mas_centerX);
+        make.bottom.equalTo(@0);
+        make.centerX.equalTo(@0);
         make.left.and.top.greaterThanOrEqualTo(@0);
-        make.right.lessThanOrEqualTo(@0);
+        make.right.and.bottom.lessThanOrEqualTo(@0);
     }];
 }
 
@@ -62,7 +72,7 @@
     return _titleLabel;
 }
 
-- (void)setModel:(Case3CollectionModel *)model
+- (void)setModel:(Case3Model *)model
 {
     _model = model;
     if (_model) {

@@ -7,20 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Case3CollectionModel.h"
+#import "Case3Model.h"
 
 static NSString * _Nonnull const Case3CollectionCellID = @"Case3CollectionCell";
-static CGFloat const widthCollectionCell = 40.0;
-static CGFloat const heightCollectionCell = 900.0;
-
+static const int WIDTH_CELL = 120;
+static const int HEIGHT_CELL = 180;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Case3CollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) Case3CollectionModel *model;
-@property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) Case3Model *model;
 
 @end
 

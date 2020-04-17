@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 static NSString * _Nonnull const Case3CollectionFooterID = @"Case3CollectionFooter";
+static const int HEIGHT_FOOTER = 50;
 
 NS_ASSUME_NONNULL_BEGIN
 

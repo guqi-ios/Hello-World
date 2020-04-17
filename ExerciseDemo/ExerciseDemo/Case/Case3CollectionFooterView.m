@@ -11,11 +11,10 @@
 
 @implementation Case3CollectionFooterView
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor systemPinkColor];
         [self initSubviews];
     }
     return self;
@@ -28,6 +27,8 @@
     [self addSubview:self.label];
     [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(@0);
+        make.left.and.top.greaterThanOrEqualTo(@0);
+        make.right.and.bottom.lessThanOrEqualTo(@0);
     }];
 }
 

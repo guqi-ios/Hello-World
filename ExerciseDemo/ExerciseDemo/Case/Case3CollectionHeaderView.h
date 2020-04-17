@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 static NSString * _Nonnull const Case3CollectionHeaderID = @"Case3CollectionHeader";
+static const int HEIGHT_HEADER = 50;
 
 NS_ASSUME_NONNULL_BEGIN
 

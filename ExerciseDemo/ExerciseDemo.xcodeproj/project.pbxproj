@@ -12,7 +12,7 @@
 		C01DE2C22445CE5800BD89C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01DE2C12445CE5800BD89C0 /* Assets.xcassets */; };
 		C01DE2C82445CE5800BD89C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C01DE2C72445CE5800BD89C0 /* main.m */; };
 		C03004262448154200314194 /* Case3CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C03004252448154200314194 /* Case3CollectionViewController.m */; };
-		C03004292448300F00314194 /* Case3CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C03004282448300E00314194 /* Case3CollectionModel.m */; };
+		C03004292448300F00314194 /* Case3Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C03004282448300E00314194 /* Case3Model.m */; };
 		C030042F2448334600314194 /* Case3CollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C030042E2448334600314194 /* Case3CollectionHeaderView.m */; };
 		C0300432244833A400314194 /* Case3CollectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0300431244833A400314194 /* Case3CollectionFooterView.m */; };
 		C0300435244833E300314194 /* Case3CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0300434244833E300314194 /* Case3CollectionViewCell.m */; };
@@ -35,8 +35,8 @@
 		C01DE2C72445CE5800BD89C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C03004242448154200314194 /* Case3CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3CollectionViewController.h; sourceTree = "<group>"; };
 		C03004252448154200314194 /* Case3CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3CollectionViewController.m; sourceTree = "<group>"; };
-		C03004272448300E00314194 /* Case3CollectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3CollectionModel.h; sourceTree = "<group>"; };
-		C03004282448300E00314194 /* Case3CollectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3CollectionModel.m; sourceTree = "<group>"; };
+		C03004272448300E00314194 /* Case3Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3Model.h; sourceTree = "<group>"; };
+		C03004282448300E00314194 /* Case3Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3Model.m; sourceTree = "<group>"; };
 		C030042D2448334600314194 /* Case3CollectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3CollectionHeaderView.h; sourceTree = "<group>"; };
 		C030042E2448334600314194 /* Case3CollectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case3CollectionHeaderView.m; sourceTree = "<group>"; };
 		C0300430244833A400314194 /* Case3CollectionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case3CollectionFooterView.h; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 			children = (
 				C030043C24485FC400314194 /* Case2Model.h */,
 				C030043D24485FC400314194 /* Case2Model.m */,
-				C03004272448300E00314194 /* Case3CollectionModel.h */,
-				C03004282448300E00314194 /* Case3CollectionModel.m */,
+				C03004272448300E00314194 /* Case3Model.h */,
+				C03004282448300E00314194 /* Case3Model.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 				C030043824485F2B00314194 /* Case2TableViewController.m in Sources */,
 				C0AD043224470609000DC425 /* MainViewController.m in Sources */,
 				C01DE2C82445CE5800BD89C0 /* main.m in Sources */,
-				C03004292448300F00314194 /* Case3CollectionModel.m in Sources */,
+				C03004292448300F00314194 /* Case3Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
