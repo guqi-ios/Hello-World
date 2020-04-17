@@ -35,8 +35,14 @@
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(@0);
     }];
-//    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {}];
-    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+//    两种方式为scrollView设置约束
+//    self.scrollView.contentSize = self.imageView.image ? self.imageView.image.size : CGSizeZero;
+//    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.and.top.greaterThanOrEqualTo(@0);
+        make.right.and.bottom.lessThanOrEqualTo(@0);
+    }];
+    
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
@@ -64,7 +70,6 @@
         _scrollView.minimumZoomScale = 0.2;
         _scrollView.maximumZoomScale = 3.0;
         _scrollView.delegate = self;
-        _scrollView.contentSize = self.imageView.image ? self.imageView.image.size : CGSizeZero;
     }
     return _scrollView;
 }
