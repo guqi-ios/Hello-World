@@ -31,13 +31,13 @@ static const int OFFSET = 10;
     self.contentView.backgroundColor = [UIColor systemPinkColor];
     
     [self.modelImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.contentView.mas_centerX);
+        make.centerX.equalTo(@0);
         make.top.equalTo(@(OFFSET));
         make.left.greaterThanOrEqualTo(@0);
         make.right.and.bottom.lessThanOrEqualTo(@0);
     }];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.contentView.mas_centerX);
+        make.centerX.equalTo(@0);
         make.top.equalTo(self.modelImageView.mas_bottom).with.offset(OFFSET);
         make.left.greaterThanOrEqualTo(@0);
         make.right.and.bottom.lessThanOrEqualTo(@0);
