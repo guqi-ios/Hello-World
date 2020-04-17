@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Case2TableViewCell : UITableViewCell
 
 @property (nonatomic, strong) Case2Model *model;
-@property (nonatomic, strong) UIImageView *modelImageView;
-@property (nonatomic, strong) UILabel *titleLabel;
 
 @end
 

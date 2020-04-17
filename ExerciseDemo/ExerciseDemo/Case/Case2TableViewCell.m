@@ -11,6 +11,13 @@
 
 static const int OFFSET = 10;
 
+@interface Case2TableViewCell()
+
+@property (nonatomic, strong) UIImageView *modelImageView;
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@end
+
 @implementation Case2TableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
