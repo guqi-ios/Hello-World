@@ -9,6 +9,5 @@
 //  No API will work without the API Key!
 //
 
-//#define MicroblogAPIKey @"2.00kxtNXCAz2XIBbabe3e41150n6u3I"
-#define MicroblogAPIKey @"2.00kxtNXC3ilIhD8da3df0ce80LRz4G"
+#define MicroblogAPIKey @""
 
