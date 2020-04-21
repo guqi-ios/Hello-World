@@ -23,8 +23,8 @@ static NSString * _Nonnull const CELLID = @"CellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:CELLID];
-    self.demoNameList = @[@"Case 0: Providing a Layer’s Contents",
-                          @"Case 1: Adjusting a Layer’s Visual Style"];
+    self.demoNameList = @[@"Case 0: Providing a Layer’s Contents and Adjusting a Layer’s Visual Style",
+                          @"Case 1: "];
 }
 
 #pragma mark - Table view data source

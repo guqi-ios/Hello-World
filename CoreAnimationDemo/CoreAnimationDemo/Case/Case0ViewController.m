@@ -29,7 +29,6 @@
 
 - (void)setupUserInterface
 {
-    self.view.backgroundColor = [UIColor systemPinkColor];
     self.leftView.backgroundColor = [UIColor grayColor];
     self.rightView.backgroundColor = [UIColor systemPinkColor];
     self.layerView.backgroundColor = [UIColor grayColor];
@@ -38,7 +37,6 @@
     [self.view addSubview:self.layerView];
     [self.leftView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.and.top.and.bottom.equalTo(@0);
-        // 不设置宽度默认会撑满，WHY？
         make.width.lessThanOrEqualTo(@150);
         make.left.and.top.greaterThanOrEqualTo(@0);
         make.right.and.bottom.lessThanOrEqualTo(@0);
@@ -62,10 +60,17 @@
     
     // Using a Delegate to Provide the Layer’s Content
     CALayer *blueLayer = [CALayer layer];
+    blueLayer.delegate = self;
     blueLayer.contentsGravity = kCAGravityResize;
     blueLayer.frame = CGRectMake(0.0f, 100.0f, 100.0f, 100.0f);
+    
+    // Adjusting a Layer’s Visual Style
     blueLayer.backgroundColor = [UIColor blueColor].CGColor;
-    blueLayer.delegate = self;
+    blueLayer. borderWidth = 10;
+    blueLayer.borderColor = [UIColor grayColor].CGColor;
+    blueLayer.cornerRadius = 20;
+    blueLayer.shadowOpacity = 1;
+    
     [self.layerView.layer addSublayer:blueLayer];
     [blueLayer display];
 }
