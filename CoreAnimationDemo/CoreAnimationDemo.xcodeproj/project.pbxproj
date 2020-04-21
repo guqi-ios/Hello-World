@@ -13,6 +13,7 @@
 		C00F3EE6244EB61600578B92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F3EE5244EB61600578B92 /* main.m */; };
 		C00F3EEE244EB6B800578B92 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F3EED244EB6B800578B92 /* MainTableViewController.m */; };
 		C00F3EF1244EBD9400578B92 /* Case0ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F3EF0244EBD9400578B92 /* Case0ViewController.m */; };
+		C00F3EF5244EC12F00578B92 /* Case1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F3EF4244EC12F00578B92 /* Case1ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		C00F3EED244EB6B800578B92 /* MainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		C00F3EEF244EBD9400578B92 /* Case0ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case0ViewController.h; sourceTree = "<group>"; };
 		C00F3EF0244EBD9400578B92 /* Case0ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case0ViewController.m; sourceTree = "<group>"; };
+		C00F3EF3244EC12F00578B92 /* Case1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case1ViewController.h; sourceTree = "<group>"; };
+		C00F3EF4244EC12F00578B92 /* Case1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case1ViewController.m; sourceTree = "<group>"; };
 		F2E7E9562B7AB0710714C080 /* Pods-CoreAnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreAnimationDemo.release.xcconfig"; path = "Target Support Files/Pods-CoreAnimationDemo/Pods-CoreAnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +92,8 @@
 			children = (
 				C00F3EEF244EBD9400578B92 /* Case0ViewController.h */,
 				C00F3EF0244EBD9400578B92 /* Case0ViewController.m */,
+				C00F3EF3244EC12F00578B92 /* Case1ViewController.h */,
+				C00F3EF4244EC12F00578B92 /* Case1ViewController.m */,
 			);
 			path = Case;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				C00F3ED5244EB61400578B92 /* AppDelegate.m in Sources */,
 				C00F3EE6244EB61600578B92 /* main.m in Sources */,
 				C00F3EEE244EB6B800578B92 /* MainTableViewController.m in Sources */,
+				C00F3EF5244EC12F00578B92 /* Case1ViewController.m in Sources */,
 				C00F3EF1244EBD9400578B92 /* Case0ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

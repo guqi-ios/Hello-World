@@ -8,6 +8,7 @@
 
 #import "MainTableViewController.h"
 #import "Case0ViewController.h"
+#import "Case1ViewController.h"
 
 static NSString * _Nonnull const CELLID = @"CellID";
 
@@ -22,7 +23,8 @@ static NSString * _Nonnull const CELLID = @"CellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:CELLID];
-    self.demoNameList = @[@"Case 0", @"Case 1"];
+    self.demoNameList = @[@"Case 0: Providing a Layer’s Contents",
+                          @"Case 1: Adjusting a Layer’s Visual Style"];
 }
 
 #pragma mark - Table view data source
@@ -58,6 +60,8 @@ static NSString * _Nonnull const CELLID = @"CellID";
         }
         case 1:
         {
+            Case1ViewController *vc = [[Case1ViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:true];
             break;
         }
         default: break;
