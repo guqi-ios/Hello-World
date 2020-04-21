@@ -20,11 +20,12 @@ static NSString * _Nonnull const CELLID = @"CellID";
 
 @implementation MainTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:CELLID];
-    self.demoNameList = @[@"Case 0: Providing a Layer’s Contents and Adjusting a Layer’s Visual Style",
-                          @"Case 1: "];
+    self.demoNameList = @[@"Case 0: Setting Up Layer Objects",
+                          @"Case 1: Animating Layer Content"];
 }
 
 #pragma mark - Table view data source
